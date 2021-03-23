@@ -1,4 +1,4 @@
-
+#include <iostream>
 
 //we want to be able to make a terminal game 
 //prints out the story at the start of the game
@@ -20,5 +20,7 @@
 
 int main()
 {
+    std::cout << " \n Please enter the correct combination...\n ";
+    std::cout << std::endl; //ends the line
     return 0;
 }
