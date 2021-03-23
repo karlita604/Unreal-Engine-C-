@@ -15,7 +15,7 @@
 //the main function 
     //call PlayGame()
     //
-    //clear the buffer
+    //clear the buffer./triplex
 
 
 int main()
