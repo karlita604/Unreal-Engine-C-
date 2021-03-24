@@ -1,40 +1,54 @@
 #include <iostream>
+#include <istream>
 
-//we want to be able to make a terminal game 
-//prints out the story at the start of the game
-//that depends on the difficulty
-
-//PlayGame() function
-    //prints out the difficulty
-    // prints out the product of the three numbers
-    //prints out the sum of the three numbers
-    //takes in the three numbers
-        // if correct it prints out congrats and then levels up
-        //if incorrect it prints out oops try again
-
-//the main function 
-    //call PlayGame()
-    //
-    //clear the buffer./triplex
-
+int level = 1;
 
 int main()
 {
-    std::cout << " \nPlease enter the correct combination...\n ";
+    std::cout << " \n+ Let there be three unknown integers: x, y and z. \n ";
     std::cout << std::endl; //ends the line
 
-    std::string hello = "\n";
+    std::string space = "\n";
 
-    int a = 123;
-    int b = 18;
-    int c = 16;
+    int FirstValue = 123;
+    int SecondValue = 18;
+    int ThirdValue = 16;
 
-    int sum = a+b+c;
-    int product = a*b*c;
+    int sum = FirstValue+SecondValue+ThirdValue;
+    int product = FirstValue*SecondValue*ThirdValue;
 
-    std::cout << "sum: " << sum << std::endl;
-    std::cout << "product: " << product << std::endl;
-    std::cout << hello;
-    
+    std::cout << "x + y + z = " << sum << std::endl;
+    std::cout << "x * y * z = " << product << std::endl;
+    std::cout << space;
+
+    std::cout << "+ To advance to the next level you must enter the correct values of x, y and z. " << std::endl ;       
+    std::cout << "+ Understood?" << std::endl ;  
+    std::cout << "+ Please enter the integers, each separated by a whitespace." << std::endl ;            
+    std::cout << space;
+
+    int FirstInput, SecondInput, ThirdInput;
+    std::cin >> FirstInput >> SecondInput >> ThirdInput;
+    std::cout << space;
+    std::cout << "+ You entered: \n\n" << "x: " << FirstInput << " y: "<< SecondInput << " z: "<< ThirdInput << space << std::endl;
+
+    int PlayerSum = FirstInput+SecondInput+ThirdInput;
+    int PlayerProduct = FirstInput*SecondInput*ThirdInput;
+
+    if(PlayerProduct == product && PlayerSum == sum){
+
+        std::cout << "Your input was CORRECT!";
+
+
+
+
+
+
+
+    }
+    else{
+
+        std::cout << "INCORRECT";
+
+    }
     return 0;
 }
