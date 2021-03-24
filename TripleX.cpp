@@ -20,7 +20,21 @@
 
 int main()
 {
-    std::cout << " \n Please enter the correct combination...\n ";
+    std::cout << " \nPlease enter the correct combination...\n ";
     std::cout << std::endl; //ends the line
+
+    std::string hello = "\n";
+
+    int a = 123;
+    int b = 18;
+    int c = 16;
+
+    int sum = a+b+c;
+    int product = a*b*c;
+
+    std::cout << "sum: " << sum << std::endl;
+    std::cout << "product: " << product << std::endl;
+    std::cout << hello;
+    
     return 0;
 }
