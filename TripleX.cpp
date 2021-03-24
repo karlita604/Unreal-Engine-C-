@@ -12,9 +12,11 @@ void play()
     std::cout << "\n\n+ LEVEL: " << level << std::endl;
 
     //Generating values
-    int FirstValue = rand() % 100;
-    int SecondValue = rand() % 100;
-    int ThirdValue = rand() % 100;
+
+    //i don't take the seed into consideration
+    int FirstValue = rand() % 10;
+    int SecondValue = rand() % 10;
+    int ThirdValue = rand() % 10;
     int sum = FirstValue + SecondValue + ThirdValue;
     int product = FirstValue * SecondValue * ThirdValue;
 
@@ -56,7 +58,7 @@ void intro()
     std::cout << " ---------------  WELCOME TO MY GAME! ---------------    \n";
     std::cout << " + Let there be three unknown integers: x, y and z.\n";
     std::cout << " + Each value will be between 0 and 100\n";
-    //std::cout << " + I will give you the sum and the product of these values.\n";
+    std::cout << " + I will give you the sum and the product of these values.\n";
     std::cout << " + To advance to the next level you must enter the correct values of x, y and z. \n";
     std::cout << space;
     std::cout << " + How many levels do you want? \n";
@@ -66,11 +68,12 @@ void intro()
 int main()
 {
     intro();
+
     //you can only fail 2*maxlevel times
     while (level < maxlevel && maxplays < 2*maxlevel)
     {
         play();
     }
-    std::cout << "THANKS FOR PLAYING! BYEBYE!";
+    std::cout << "****THANKS FOR PLAYING! BYEBYE!****";
     return 0;
 }
