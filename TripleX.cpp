@@ -36,19 +36,15 @@ int main()
 
     if(PlayerProduct == product && PlayerSum == sum){
 
-        std::cout << "Your input was CORRECT!";
-
-
-
-
-
-
-
+        std::cout << "+ CORRECT!" << std::endl;
+        level++;
+        std::cout << "+ LEVEL: " << level << std::endl;
     }
     else{
 
-        std::cout << "INCORRECT";
-
+        std::cout << "INCORRECT" << std::endl;
+        std::cout << space; 
+        std::cout << "+ LEVEL: " << level << std::endl;
     }
     return 0;
 }
